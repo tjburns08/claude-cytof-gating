@@ -1,0 +1,12 @@
+# R
+.Rhistory
+.Rdata
+.RData
+.Rproj.user/
+*.Rproj
+
+# Large data files
+data/samusik_01.rds
+
+# macOS
+.DS_Store
