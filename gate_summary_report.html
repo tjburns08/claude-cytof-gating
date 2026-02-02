@@ -1,0 +1,103 @@
+<html><head><style>body{font-family:sans-serif;max-width:900px;margin:auto;padding:20px}table{border-collapse:collapse}th,td{border:1px solid #ccc;padding:4px 8px}</style></head><body>
+<h1>Gate Summary Report — Samusik 01 Manual Gating</h1>
+<br>
+<h2>Dataset Overview</h2>
+<p>- **Dataset**: Samusik 01 bone marrow CyTOF</p>
+<p>- **Total events**: 86,864</p>
+<p>- **Markers**: 39 phenotypic + 12 QC columns</p>
+<p>- **Transformation**: asinh(x/5)</p>
+<br>
+<h2>QC Gating Cascade</h2>
+<p>| Gate | Population | Events | % of parent |</p>
+<p>|------|-----------|--------|-------------|</p>
+<p>| 01 | DNA+ | 85,248 | 98.1% |</p>
+<p>| 02 | Singlets | 82,607 | 96.9% |</p>
+<p>| 03 | Live (Cisplatin-) | 74,346 | 90.0% |</p>
+<p>| 04 | CD45.2+ Ter119- | 69,279 | 93.2% |</p>
+<br>
+<p>**Root population**: 69,279 events (79.8% of total)</p>
+<br>
+<h2>Key Thresholds</h2>
+<p>| Marker | Threshold | Method |</p>
+<p>|--------|-----------|--------|</p>
+<p>| SiglecF | 1.500 | Fixed (biologically informed) |</p>
+<p>| Ly6G | 0.309 | find_valley (0.3-0.9, fallback 0.6) |</p>
+<p>| CD11b | 1.457 | find_valley |</p>
+<p>| CD3 | 1.000 | Fixed (positive median ~2.4, neg ~-0.04) |</p>
+<p>| NKp46 | 1.069 | find_valley (0.8-0.99, fallback 0.95) |</p>
+<p>| CD19 | 0.937 | find_valley |</p>
+<p>| B220 | 1.421 | find_valley |</p>
+<p>| CD11c | 0.250 | Fixed (biologically informed) |</p>
+<p>| MHCII | 0.969 | find_valley |</p>
+<p>| CD138 | 1.500 | Fixed (biologically informed) |</p>
+<p>| FceR1a | 1.000 | Fixed |</p>
+<p>| CD49b | 1.400 | Fixed |</p>
+<p>| TCRgd | 0.670 | Fixed |</p>
+<br>
+<h2>Terminal Population Counts</h2>
+<p>| Population | Count | % of root |</p>
+<p>|-----------|-------|-----------|</p>
+<p>| IgDpos IgMpos B cells | 8,496 | 12.26% |</p>
+<p>| Eosinophils | 4,709 | 6.80% |</p>
+<p>| IgD- IgMpos B cells | 4,568 | 6.59% |</p>
+<p>| Classical Monocytes | 4,499 | 6.50% |</p>
+<p>| Intermediate Monocytes | 4,296 | 6.20% |</p>
+<p>| IgM- IgD- B-cells | 4,203 | 6.07% |</p>
+<p>| Non-Classical Monocytes | 4,099 | 5.92% |</p>
+<p>| Macrophages | 1,980 | 2.86% |</p>
+<p>| NKT cells | 1,458 | 2.10% |</p>
+<p>| CD8 T cells | 1,066 | 1.54% |</p>
+<p>| NK cells | 846 | 1.22% |</p>
+<p>| mDCs | 770 | 1.11% |</p>
+<p>| MPP | 723 | 1.04% |</p>
+<p>| HSC | 636 | 0.92% |</p>
+<p>| Basophils | 595 | 0.86% |</p>
+<p>| CD4 T cells | 566 | 0.82% |</p>
+<p>| Plasma Cells | 418 | 0.60% |</p>
+<p>| CMP | 375 | 0.54% |</p>
+<p>| pDCs | 345 | 0.50% |</p>
+<p>| GMP | 313 | 0.45% |</p>
+<p>| MEP | 313 | 0.45% |</p>
+<p>| gd T cells | 204 | 0.29% |</p>
+<p>| CLP | 79 | 0.11% |</p>
+<p>| B-cell Frac A-C (pro-B cells) | 66 | 0.10% |</p>
+<p>| **Unassigned** | **41,241** | **47.5% of total** |</p>
+<br>
+<h2>QA Results</h2>
+<br>
+<h3>Data Integrity</h3>
+<p>- Event count match: TRUE (86,864)</p>
+<p>- Illegal labels: 0</p>
+<p>- NAs: 0</p>
+<br>
+<h3>Frequency Flags</h3>
+<p>- HSC > 0.1% of root: 0.918% (flagged, but 636 cells is biologically reasonable for BM)</p>
+<br>
+<h3>Signature Violations (all < 10%)</h3>
+<p>| Population | Rule | Violating | Fraction |</p>
+<p>|-----------|------|-----------|----------|</p>
+<p>| NK cells | CD3 low | 0 | 0.0% |</p>
+<p>| CD4 T cells | CD8 low | 27 | 4.8% |</p>
+<p>| CD8 T cells | CD4 low | 26 | 2.4% |</p>
+<p>| Plasma Cells | IgD low | 0 | 0.0% |</p>
+<p>| Eosinophils | Ly6G low | 0 | 0.0% |</p>
+<p>| pDCs | 120g8 high | 0 | 0.0% |</p>
+<p>| Eosinophils | SiglecF high | 0 | 0.0% |</p>
+<p>| Macrophages | CD64 high | 0 | 0.0% |</p>
+<p>| Macrophages | F480 high | 0 | 0.0% |</p>
+<br>
+<h3>Gate Overlap (pre-resolution)</h3>
+<p>- 0 gates: 23,656 events</p>
+<p>- 1 gate: 39,134 events</p>
+<p>- 2 gates: 6,302 events</p>
+<p>- 3+ gates: 187 events</p>
+<br>
+<p>Top overlapping pairs resolved by precedence ordering.</p>
+<br>
+<h2>Revisions</h2>
+<p>1. **v1-v4**: Initial script development with iterative threshold calibration</p>
+<p>2. **v5-v6**: Adjusted CD3, NKp46, Ly6G thresholds based on reference data analysis</p>
+<p>3. **v7-v8**: Set biologically-informed fixed thresholds for CD3, SiglecF, CD138, FceR1a, CD49b, CD11c</p>
+<p>4. **v9**: Strict NK CD3 exclusion (< 0.0), removed CD115 requirement for monocytes (improved from ~6k to ~13k total), added IgD exclusion for Plasma cells</p>
+<p>5. **v10-v11**: Updated violation check to use Q90/Q10 thresholds instead of root median, which was producing false violations even on reference-labeled data</p>
+</body></html>

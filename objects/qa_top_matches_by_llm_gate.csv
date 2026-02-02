@@ -1,0 +1,75 @@
+"llm_gate","ref_label","count","fraction"
+"B-cell Frac A-C (pro-B cells)","pDCs",30,0.454545454545455
+"B-cell Frac A-C (pro-B cells)","unassigned",22,0.333333333333333
+"B-cell Frac A-C (pro-B cells)","B-cell Frac A-C (pro-B cells)",11,0.166666666666667
+"Basophils","Basophils",226,0.379831932773109
+"Basophils","unassigned",190,0.319327731092437
+"Basophils","NKT cells",130,0.218487394957983
+"CD4 T cells","CD4 T cells",339,0.598939929328622
+"CD4 T cells","unassigned",205,0.362190812720848
+"CD4 T cells","NKT cells",19,0.0335689045936396
+"CD8 T cells","CD8 T cells",695,0.651969981238274
+"CD8 T cells","unassigned",275,0.25797373358349
+"CD8 T cells","NKT cells",91,0.0853658536585366
+"Classical Monocytes","Classical Monocytes",3391,0.75372304956657
+"Classical Monocytes","unassigned",618,0.137363858635252
+"Classical Monocytes","Intermediate Monocytes",485,0.107801733718604
+"CLP","unassigned",67,0.848101265822785
+"CLP","Classical Monocytes",7,0.0886075949367089
+"CLP","Basophils",3,0.0379746835443038
+"CMP","unassigned",227,0.605333333333333
+"CMP","Intermediate Monocytes",61,0.162666666666667
+"CMP","GMP",31,0.0826666666666667
+"Eosinophils","Eosinophils",2039,0.433000637077936
+"Eosinophils","unassigned",1864,0.395837757485666
+"Eosinophils","Intermediate Monocytes",460,0.0976852834996815
+"gd T cells","unassigned",117,0.573529411764706
+"gd T cells","NKT cells",56,0.274509803921569
+"gd T cells","gd T cells",30,0.147058823529412
+"GMP","unassigned",179,0.571884984025559
+"GMP","Intermediate Monocytes",54,0.172523961661342
+"GMP","GMP",38,0.121405750798722
+"HSC","unassigned",298,0.468553459119497
+"HSC","Intermediate Monocytes",244,0.383647798742138
+"HSC","MEP",39,0.0613207547169811
+"IgD- IgMpos B cells","IgD- IgMpos B cells",2928,0.640980735551664
+"IgD- IgMpos B cells","unassigned",1494,0.327057793345009
+"IgD- IgMpos B cells","B-cell Frac A-C (pro-B cells)",92,0.0201401050788091
+"IgDpos IgMpos B cells","IgDpos IgMpos B cells",7470,0.879237288135593
+"IgDpos IgMpos B cells","unassigned",1005,0.118290960451977
+"IgDpos IgMpos B cells","B-cell Frac A-C (pro-B cells)",13,0.001530131826742
+"IgM- IgD- B-cells","pDCs",1982,0.471567927670711
+"IgM- IgD- B-cells","unassigned",1131,0.269093504639543
+"IgM- IgD- B-cells","IgM- IgD- B-cells",898,0.213656911729717
+"Intermediate Monocytes","Classical Monocytes",2487,0.57891061452514
+"Intermediate Monocytes","Intermediate Monocytes",1249,0.290735567970205
+"Intermediate Monocytes","unassigned",555,0.129189944134078
+"Macrophages","Classical Monocytes",1014,0.512121212121212
+"Macrophages","Intermediate Monocytes",474,0.239393939393939
+"Macrophages","unassigned",392,0.197979797979798
+"mDCs","unassigned",413,0.536363636363636
+"mDCs","Intermediate Monocytes",171,0.222077922077922
+"mDCs","Eosinophils",63,0.0818181818181818
+"MEP","Intermediate Monocytes",165,0.527156549520767
+"MEP","unassigned",88,0.281150159744409
+"MEP","MEP",31,0.0990415335463259
+"MPP","unassigned",470,0.650069156293223
+"MPP","GMP",120,0.16597510373444
+"MPP","MPP",71,0.0982019363762102
+"NK cells","Intermediate Monocytes",387,0.457446808510638
+"NK cells","unassigned",165,0.195035460992908
+"NK cells","IgDpos IgMpos B cells",96,0.113475177304965
+"NKT cells","Intermediate Monocytes",655,0.449245541838134
+"NKT cells","unassigned",530,0.363511659807956
+"NKT cells","NKT cells",45,0.0308641975308642
+"Non-Classical Monocytes","Intermediate Monocytes",1614,0.393754574286411
+"Non-Classical Monocytes","unassigned",1313,0.320322029763357
+"Non-Classical Monocytes","Non-Classical Monocytes",559,0.136374725542815
+"pDCs","unassigned",178,0.515942028985507
+"pDCs","pDCs",167,0.484057971014493
+"Plasma Cells","unassigned",210,0.502392344497608
+"Plasma Cells","Plasma Cells",59,0.141148325358852
+"Plasma Cells","Classical Monocytes",58,0.138755980861244
+"unassigned","unassigned",21685,0.525811692248006
+"unassigned","Intermediate Monocytes",5920,0.143546470745132
+"unassigned","Classical Monocytes",5787,0.140321524696297

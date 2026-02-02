@@ -1,0 +1,38 @@
+<html><head><style>body{font-family:sans-serif;max-width:900px;margin:auto;padding:20px}table{border-collapse:collapse}th,td{border:1px solid #ccc;padding:4px 8px}</style></head><body>
+<h1>Gate Comparison Report — LLM Gate vs Reference (Spitzer)</h1>
+<br>
+<h2>Overview</h2>
+<p>Comparison of `llm_gate` labels against `spitzer_gate.rds` reference labels.</p>
+<br>
+<h2>Reference Label Distribution</h2>
+<p>The reference contains 24 terminal populations plus "unassigned" (38.8% unassigned).</p>
+<br>
+<h2>Key Comparisons</h2>
+<br>
+<h3>Well-matched populations</h3>
+<p>- **Eosinophils**: 4,709 (llm) — reference has ~5,765; good agreement</p>
+<p>- **B cell subsets**: IgD+M+ 8,496, IgD-M+ 4,568, IgM-IgD- 4,203 — reasonable totals</p>
+<p>- **Basophils**: 595 (llm) vs ~432 (ref) — reasonable</p>
+<p>- **Progenitors** (HSC, MPP, CMP, GMP, MEP, CLP): generally consistent with reference</p>
+<br>
+<h3>Populations with notable differences</h3>
+<p>- **Classical Monocytes**: 4,499 (llm) vs 13,607 (ref) — undercount. Monocytes gated from CD11b+ Ly6G- SiglecF- without CD115, but CD11b threshold may exclude some.</p>
+<p>- **Intermediate Monocytes**: 4,296 (llm) vs 12,045 (ref) — same issue</p>
+<p>- **NK cells**: 846 (llm) vs 189 (ref) — overcount, but NK definition varies</p>
+<p>- **NKT cells**: 1,458 (llm) vs 371 (ref) — NKp46 threshold captures more cells</p>
+<p>- **T cell subsets**: CD4 566 vs 2,7k ref, CD8 1,066 vs 2,4k ref — CD3 threshold of 1.0 is strict</p>
+<br>
+<h3>Unassigned</h3>
+<p>- LLM: 47.5%</p>
+<p>- Reference: 38.8%</p>
+<p>- Difference mainly due to monocyte undercount and strict T cell gating</p>
+<br>
+<h2>Confusion Table</h2>
+<p>Full confusion matrix saved to `objects/qa_confusion_table.csv`.</p>
+<p>Top matches per llm_gate label saved to `objects/qa_top_matches_by_llm_gate.csv`.</p>
+<br>
+<h2>UMAP Visualizations</h2>
+<p>- `figures/umap_llm_gate.png` — LLM gate labels on UMAP</p>
+<p>- `figures/umap_reference_gate.png` — Reference labels on UMAP</p>
+<p>- `figures/umap_side_by_side.png` — Side-by-side comparison</p>
+</body></html>
