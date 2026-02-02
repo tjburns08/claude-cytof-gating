@@ -26,7 +26,7 @@ We compared the output against expert-curated reference labels (Spitzer et al.).
 
 **82.4% lineage-level accuracy** — When the LLM assigns a cell to a type and the reference also assigns it, they agree on the major lineage 82% of the time (27,700 / 33,617 both-assigned cells). The LLM rarely confuses a B cell for a T cell or a monocyte for a progenitor.
 
-> **Rigorous definition of "lineage-level":** This is NOT derived from the gating tree topology. It is a flat, manually defined grouping of the 24 terminal populations into 6 categories based on canonical immunology naming:
+> **Definition of "lineage-level":** This is not derived from the gating tree topology. It is a flat, manually defined grouping of the 24 terminal populations into 6 categories based on canonical immunology naming:
 > - **T/NK**: CD4 T, CD8 T, gd T, NK, NKT
 > - **B**: IgD+IgM+ B, IgD-IgM+ B, IgM-IgD- B, Plasma Cells, Pro-B (Frac A-C)
 > - **Myeloid**: Classical Monocytes, Intermediate Monocytes, Non-Classical Monocytes, Macrophages
