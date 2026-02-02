@@ -1,7 +1,7 @@
 # Can an LLM Replace a Human at Manual Gating?
 
 ## The Experiment
-We gave Claude Code (Opus 4.5) a 86,864-event CyTOF bone marrow dataset (Samusik 01), a gating strategy image, and a written protocol. No human touched the data. The LLM wrote and iteratively debugged an R script that implements a full 24-population hierarchical manual gating pipeline — from QC gates through terminal cell type assignment.
+I gave Claude Code (Opus 4.5) a 86,864-event CyTOF bone marrow dataset (Samusik 01), a gating strategy image, and a written protocol. No human touched the data. The LLM wrote and iteratively debugged an R script that implements a full 24-population hierarchical manual gating pipeline — from QC gates through terminal cell type assignment.
 
 We compared the output against expert-curated reference labels (Spitzer et al.).
 
@@ -92,7 +92,7 @@ We compared the output against expert-curated reference labels (Spitzer et al.).
 
 **The strongest signal**: the LLM's ability to autonomously debug, diagnose, and iterate. It identified that CD115 was the wrong marker, that its QA metric was flawed, and that NKp46 is dim in this panel, all without human input. That self-correcting capability, combined with better tooling, could make this production-viable.
 
-**Recommended next step**: Run the same experiment with (1) expected count ranges in the QA doc, (2) example gate plots, and (3) mixture model thresholding. We predict this would push exact-match accuracy above 70% and weighted F1 above 60%.
+**Recommended next step**: Run the same experiment with (1) expected count ranges in the QA doc, (2) example gate plots, and (3) mixture model thresholding. I predict this would push exact-match accuracy above 70% and weighted F1 above 60%.
 
 ---
 
